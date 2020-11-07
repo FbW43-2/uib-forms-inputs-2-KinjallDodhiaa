@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>UIB forms input</title>
+  </head>
+  <body>
+    <main>
+      <form action="" method="POST">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <div>
+            <label for="first-name">First Name</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              maxlength="30"
+              required
+            />
+          </div>
+          <div>
+            <label for="last-name">Last Name</label>
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              maxlength="50"
+              required
+            />
+          </div>
+          <div>
+            <label for="user-picture">User Picture</label>
+            <input
+              type="file"
+              name="user-pictre"
+              id="user-picture"
+              max="1"
+              accept="image/*"
+            />
+          </div>
+          <div>
+            <label for="insurance-type">Insurance Type</label>
+            <input
+              type="text"
+              name="insurance-type"
+              id="insurance-type0"
+              readonly
+              value="insurance type 1"
+            />
+          </div>
+          <fieldset>
+            <legend>Address</legend>
+            <div>
+              <label for="street-name">Street Name</label>
+              <input
+                type="text"
+                name="street-name"
+                id="street-name"
+                required
+                max="150"
+              />
+            </div>
+            <div>
+              <label for="house-number">House Number</label>
+              <input
+                type="number"
+                id="house-number"
+                name="house-number"
+                max="1"
+              />
+            </div>
+            <div>
+              <label for="postal-code">Postal Code</label>
+              <input
+                type="number"
+                name="postal-code"
+                id="postal-code"
+                requires
+              />
+            </div>
+          </fieldset>
+          <div>
+            <label for="city">City</label>
+            <input
+              list="city-suggestions"
+              type="text"
+              name="city"
+              id="city"
+              required
+            />
+            <datalist id="city-suggestions">
+              <option value="Berlin"></option>
+              <option value="Hamburg"></option>
+              <option value="Leipzig"></option>
+              <option value="Stuttgart"></option>
+              <option value="Cottbus"></option>
+              <option value="Tübingen"></option>
+            </datalist>
+          </div>
+          <div>
+            <label for="cars">Cars</label>
+            <select name="Cars" id="cars">
+              <optgroup label="Germany">
+                <option value="BMW">BMW</option>
+                <option value="Audi">Audi</option>
+              </optgroup>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Porsche">Porsche</option>
+              <option value="Tesla">Tesla</option>
+              <option value="Peugeot">Peugot</option>
+              <option value="Land Rover">Land Rover</option>
+            </select>
+          </div>
+          <div>
+            <label for="car-picture">Car Picture</label>
+            <input
+              type="file"
+              name="car-picture"
+              id="car-picture"
+              accept=".jpeg"
+            />
+          </div>
+          <div>
+            <label for="monthly-salary">Monthly Salary</label>
+            <select name="monthly-salary" id="monthly-salary">
+              <option value="0">0</option>
+              <option value="0-1000">0-1000</option>
+              <option value="1000-3000">1000-3000</option>
+              <option value="10000 +">10000 +</option>
+            </select>
+          </div>
+          <div>
+            <label for="car-plate">Car Plate</label>
+            <input
+              type="text"
+              id="car-plate"
+              name="car-plate"
+              pattern="[A-Za-z]{3} [0-9] {6}"
+            />
+          </div>
+          <button>Submit</button>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
